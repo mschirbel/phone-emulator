@@ -4,7 +4,7 @@ export const NOTES: Note[] = [
   {
     id: "n1",
     title: "Sábado (URGENTE)",
-    content: "- Passar na farmácia (enjoo continuou)\n- Imprimir e-mail da ameaça\n- **Fazer B.O. Eletrônico (Ameaça/Perseguição)**\n- Conversar com Marcos (Ultimato: ou ela ou eu)",
+    content: "- Passar na farmácia (enjoo continuou)\n- Imprimir e-mail da ameaça\n- **Fazer B.O. Eletrônico (Ameaça/Perseguição)**\n- Ultimato ao Marcos",
     date: "Ontem, 08:30",
     completed: false
   },
