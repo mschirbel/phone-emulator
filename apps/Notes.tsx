@@ -13,7 +13,7 @@ const NotesApp: React.FC<NotesAppProps> = ({ notes, onBack }) => {
   if (selectedNote) {
     return (
       <div className="w-full h-full bg-[#FFF9E6] text-[#423300] flex flex-col pt-10">
-        <div className="flex items-center justify-between px-4 py-2">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-[#E8E0C5]">
           <button onClick={() => setSelectedNote(null)} className="text-[#D4AF37] font-bold text-lg">Done</button>
           <span className="text-xs opacity-50">{selectedNote.date}</span>
           <button className="text-[#D4AF37]">Share</button>
@@ -37,12 +37,13 @@ const NotesApp: React.FC<NotesAppProps> = ({ notes, onBack }) => {
 
   return (
     <div className="w-full h-full bg-[#FFF9E6] text-[#423300] flex flex-col pt-10 px-4">
-      <div className="flex justify-between items-center py-4">
+      {/* Standard Header */}
+      <div className="flex justify-between items-end py-2 border-b border-[#E8E0C5] pb-4">
         <h1 className="text-3xl font-bold">Notes</h1>
-        <button onClick={onBack} className="text-[#D4AF37] font-medium">Exit</button>
+        <button onClick={onBack} className="text-sm text-[#D4AF37] font-medium">Close</button>
       </div>
       
-      <div className="bg-white/50 rounded-xl overflow-hidden shadow-sm">
+      <div className="bg-white/50 rounded-xl overflow-hidden shadow-sm mt-4">
         {notes.map((note, index) => (
           <button 
             key={note.id}

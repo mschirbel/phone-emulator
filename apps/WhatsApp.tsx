@@ -44,9 +44,9 @@ const WhatsAppApp: React.FC<WhatsAppAppProps> = ({ chats, onBack }) => {
     <div className="w-full h-full bg-white text-black flex flex-col pt-10">
       <div className="bg-[#075E54] text-white px-4 py-3 flex justify-between items-center">
         <h1 className="text-xl font-medium">WhatsApp</h1>
-        <div className="flex gap-4">
-          <button>🔍</button>
-          <button onClick={onBack}>🏠</button>
+        <div className="flex items-center gap-4">
+          <button className="opacity-80">🔍</button>
+          <button onClick={onBack} className="text-sm font-medium hover:opacity-100 transition-opacity">Close</button>
         </div>
       </div>
       <div className="flex-1 overflow-y-auto">

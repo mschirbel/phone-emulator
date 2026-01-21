@@ -12,27 +12,28 @@ const PhoneApp: React.FC<PhoneAppProps> = ({ calls, onBack }) => {
 
   return (
     <div className="w-full h-full bg-white text-black flex flex-col pt-10">
+      {/* Standard Header */}
+      <div className="px-4 py-2 flex justify-between items-end border-b pb-4">
+        <h1 className="text-3xl font-bold">{tab === 'recents' ? 'Recents' : 'Keypad'}</h1>
+        <button onClick={onBack} className="text-sm text-blue-600 font-medium">Close</button>
+      </div>
+
       <div className="flex-1 flex flex-col">
         {tab === 'recents' ? (
-          <>
-            <div className="px-4 py-4">
-              <h1 className="text-3xl font-bold">Recents</h1>
-            </div>
-            <div className="flex-1 overflow-y-auto px-4">
-              {calls.map(call => (
-                <div key={call.id} className="flex items-center py-3 border-b gap-3">
-                  <div className={`text-lg ${call.type === 'missed' ? 'text-red-500' : 'text-gray-400'}`}>
-                    {call.type === 'incoming' ? '↙️' : call.type === 'outgoing' ? '↗️' : '🚫'}
-                  </div>
-                  <div className="flex-1">
-                    <p className={`font-semibold ${call.type === 'missed' ? 'text-red-500' : 'text-black'}`}>{call.contactName}</p>
-                    <p className="text-xs text-gray-500">{call.time}</p>
-                  </div>
-                  <div className="text-xs text-gray-400">{call.duration || 'Missed'}</div>
+          <div className="flex-1 overflow-y-auto px-4">
+            {calls.map(call => (
+              <div key={call.id} className="flex items-center py-3 border-b gap-3">
+                <div className={`text-lg ${call.type === 'missed' ? 'text-red-500' : 'text-gray-400'}`}>
+                  {call.type === 'incoming' ? '↙️' : call.type === 'outgoing' ? '↗️' : '🚫'}
                 </div>
-              ))}
-            </div>
-          </>
+                <div className="flex-1">
+                  <p className={`font-semibold ${call.type === 'missed' ? 'text-red-500' : 'text-black'}`}>{call.contactName}</p>
+                  <p className="text-xs text-gray-500">{call.time}</p>
+                </div>
+                <div className="text-xs text-gray-400">{call.duration || 'Missed'}</div>
+              </div>
+            ))}
+          </div>
         ) : (
           <div className="flex-1 flex flex-col items-center justify-center p-6 gap-6">
             <div className="text-3xl font-light h-10 tracking-widest"></div>
@@ -59,10 +60,6 @@ const PhoneApp: React.FC<PhoneAppProps> = ({ calls, onBack }) => {
         <button onClick={() => setTab('keypad')} className={`flex flex-col items-center gap-1 ${tab === 'keypad' ? 'text-blue-600' : 'text-gray-400'}`}>
           <span className="text-xl">🔢</span>
           <span className="text-[10px]">Keypad</span>
-        </button>
-        <button onClick={onBack} className="flex flex-col items-center gap-1 text-gray-400">
-          <span className="text-xl">🏠</span>
-          <span className="text-[10px]">Home</span>
         </button>
       </div>
     </div>

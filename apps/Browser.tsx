@@ -23,9 +23,14 @@ const BrowserApp: React.FC<BrowserAppProps> = ({ browser, onBack }) => {
 
   return (
     <div className="w-full h-full bg-white text-black flex flex-col pt-10">
+      {/* Standard Header */}
+      <div className="px-4 py-2 flex justify-between items-end border-b pb-4">
+        <h1 className="text-3xl font-bold">Browser</h1>
+        <button onClick={onBack} className="text-sm text-blue-600 font-medium">Close</button>
+      </div>
+
       <div className="bg-gray-100 p-2 flex flex-col gap-2">
         <div className="flex items-center gap-2">
-          <button onClick={onBack} className="text-lg">✖️</button>
           <form onSubmit={handleSearch} className="flex-1">
             <input 
               type="text"
@@ -35,7 +40,6 @@ const BrowserApp: React.FC<BrowserAppProps> = ({ browser, onBack }) => {
               placeholder="Search or enter URL"
             />
           </form>
-          {/* Refresh button functionality removed as requested */}
           <button className="text-lg opacity-50 cursor-default">🔄</button>
         </div>
         <div className="flex gap-4 px-2 overflow-x-auto text-[10px] text-gray-500 font-medium whitespace-nowrap">
