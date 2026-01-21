@@ -1,33 +1,32 @@
-
 import { Note } from '../types';
 
 export const NOTES: Note[] = [
   {
     id: "n1",
-    title: "To-do List",
-    content: "- Buy milk\n- Pay utility bill\n- Meet J at Sector 7 (10 PM)\n- Burn the drive",
-    date: "Oct 24, 2024",
+    title: "Sábado (URGENTE)",
+    content: "- Passar na farmácia (enjoo continuou)\n- Imprimir e-mail da ameaça\n- **Fazer B.O. Eletrônico (Ameaça/Perseguição)**\n- Conversar com Marcos (Ultimato: ou ela ou eu)",
+    date: "Ontem, 08:30",
     completed: false
   },
   {
     id: "n2",
-    title: "Safe Code",
-    content: "The birthday of the first one. 0824?",
-    date: "Oct 22, 2024",
+    title: "Nomes?? 👶",
+    content: "Se for menina: Sofia, Maya, Isabela.\nSe for menino: Davi, Lucas.",
+    date: "Sexta, 23:15",
     completed: false
   },
   {
     id: "n3",
-    title: "Project Echo Notes",
-    content: "Initialization sequence: 4-alpha-9er. Key involves the timestamp of the first transmission.",
-    date: "Oct 20, 2024",
-    completed: true
+    title: "Projeto Paris ✈️",
+    content: "- Renovar passaporte (vence em maio)\n- Comprar mala de mão\n- Ver curso intensivo de francês\n- Pesquisar aluguel em Montmartre",
+    date: "Quinta, 14:00",
+    completed: false
   },
   {
     id: "n4",
-    title: "Groceries",
-    content: "- Coffee beans\n- Bread\n- Eggs",
-    date: "Oct 15, 2024",
-    completed: true
+    title: "Senha Wi-Fi Casa",
+    content: "SantaAurora_502\nSenha: amor_eterno_2025",
+    date: "Jan 05",
+    completed: false
   }
 ];
