@@ -13,17 +13,22 @@ const Home: React.FC<HomeProps> = ({ onOpenApp, wallpaper }) => {
       className="w-full h-full bg-cover bg-center flex flex-col pt-16 pb-12 px-6"
       style={{ backgroundImage: `url(${wallpaper})` }}
     >
-      {/* Search Bar / Widget Area */}
-      <div className="mb-6 w-full bg-white/10 backdrop-blur-md rounded-2xl p-4 flex flex-col gap-1 ring-1 ring-white/20">
-        <span className="text-white/60 text-[10px] uppercase font-bold">Weather • Sector 7</span>
-        <div className="flex justify-between items-center">
-          <span className="text-white text-2xl font-semibold">22°C</span>
-          <span className="text-white/80 text-sm">Partly Cloudy</span>
+      {/* Dynamic Widget Area */}
+      <div className="mb-6 w-full bg-black/20 backdrop-blur-lg rounded-3xl p-4 flex flex-col gap-1 ring-1 ring-white/20 shadow-xl">
+        <div className="flex justify-between items-start">
+          <div className="flex flex-col">
+            <span className="text-white/70 text-[10px] uppercase font-bold tracking-wider">Thursday, Oct 24</span>
+            <span className="text-white text-3xl font-light">14:55</span>
+          </div>
+          <div className="text-right">
+            <span className="text-white text-xl font-medium">22°</span>
+            <span className="text-white/60 block text-[10px]">Partly Cloudy</span>
+          </div>
         </div>
       </div>
 
-      {/* App Grid - 5 Rows for a more "vivid" filled screen */}
-      <div className="grid grid-cols-4 gap-y-6 gap-x-2">
+      {/* App Grid */}
+      <div className="grid grid-cols-4 gap-y-6 gap-x-2 overflow-y-auto">
         {/* Row 1 */}
         <AppIcon label="Camera" icon="📷" color="bg-zinc-800" disabled />
         <AppIcon label="Email" icon="✉️" color="bg-blue-500" onClick={() => onOpenApp(AppID.EMAIL)} />
@@ -55,9 +60,9 @@ const Home: React.FC<HomeProps> = ({ onOpenApp, wallpaper }) => {
         <AppIcon label="Settings" icon="⚙️" color="bg-gray-600" disabled />
       </div>
 
-      {/* Dock Area */}
+      {/* Persistent Dock */}
       <div className="mt-auto">
-        <div className="bg-white/20 backdrop-blur-xl rounded-[2.5rem] p-4 grid grid-cols-4 gap-4 ring-1 ring-white/10">
+        <div className="bg-white/25 backdrop-blur-2xl rounded-[2.5rem] p-4 grid grid-cols-4 gap-4 ring-1 ring-white/20 shadow-2xl">
           <AppIcon label="Phone" icon="📞" color="bg-green-500" showLabel={false} onClick={() => onOpenApp(AppID.PHONE)} />
           <AppIcon label="WhatsApp" icon="💬" color="bg-emerald-500" showLabel={false} onClick={() => onOpenApp(AppID.WHATSAPP)} />
           <AppIcon label="Email" icon="✉️" color="bg-blue-500" showLabel={false} onClick={() => onOpenApp(AppID.EMAIL)} />
