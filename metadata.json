@@ -1,0 +1,5 @@
+{
+  "name": "Phone Emulator",
+  "description": "A customizable, interactive smartphone UI built for mystery games and digital storytelling. Includes functional Email, WhatsApp, Phone, and Browser apps driven by editable data.",
+  "requestFramePermissions": []
+}
