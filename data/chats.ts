@@ -7,11 +7,11 @@ export const CHATS: Chat[] = [
     contactName: "Clara 🤍",
     lastSeen: "Online",
     messages: [
-      { id: "m101", text: "Amiga, o clima tá horrível aqui. A Helena me olhou com um ódio hj...", time: "14:00", isMe: false },
-      { id: "m102", text: "Eu te avisei, Ju. Ela é perigosa. Ouvi ela gritando no telefone que ia 'dar um fim nisso'.", time: "14:05", isMe: true },
+      { id: "m101", text: "Amiga, o clima tá horrível aqui. A Helena me olhou com um ódio hj...", time: "14:00", isMe: true },
+      { id: "m102", text: "Eu te avisei, Ju. Ela é perigosa. Ouvi ela gritando no telefone que ia 'dar um fim nisso'.", time: "14:05", isMe: false },
       { id: "m103", text: "Vc acha que ela sabe do Marcos?", time: "14:06", isMe: true },
       { id: "m104", text: "Certeza. O Marcos é mole, deve ter deixado rastro. Se cuida, tá?", time: "14:10", isMe: false },
-      { id: "m105", text: "Nossa, tô mto enjoada hj. Acho que minha pressão caiu. Vou ficar deitada aqui no quarto qnd a Dona Beatriz sair.", time: "14:12", isMe: false },
+      { id: "m105", text: "Nossa, tô mto enjoada hj. Acho que minha pressão caiu. Vou ficar deitada aqui no quarto qnd a Dona Beatriz sair.", time: "14:12", isMe: true },
       { id: "m106", text: "Vou descer pra lavanderia mais tarde, qnd a Helena dormir. Não quero cruzar com ela.", time: "19:30", isMe: true },
       { id: "m107", text: "Vai tranquila. Qualquer coisa grita.", time: "19:35", isMe: false }
     ]
@@ -61,7 +61,7 @@ export const CHATS: Chat[] = [
     messages: [
       { id: "m401", text: "Ricardo Síndico: ⚠️ AVISO DE MANUTENÇÃO", time: "Ontem 08:00", isMe: false },
       { id: "m402", text: "A manutenção do elevador social foi concluída nesta madrugada.", time: "Ontem 08:01", isMe: false },
-      { id: "m403", text: "ATENÇÃO: O novo motor é de alta performance. O tempo de viagem foi reduzido para EXATOS 2 SEGUNDOS POR ANDAR.", time: "Ontem 08:02", isMe: false },
+      { id: "m403", text: "ATENÇÃO: O novo motor é de alta performance. O tempo de viagem foi reduzido para 2 segundos por andar.", time: "Ontem 08:02", isMe: false },
       { id: "m404", text: "Nota: O display digital queimou durante a instalação. Peça de reposição chega em 30 dias. Contamos com a compreensão.", time: "Ontem 08:03", isMe: false }
       // PISTA CRUCIAL: Sem display, o assassino mente sobre o andar. O tempo (2s/andar) é a única forma de descobrir a verdade.
     ]
@@ -75,8 +75,7 @@ export const CHATS: Chat[] = [
     messages: [
       { id: "m501", text: "Júlia, onde você colocou a camisa social azul do Marcos?", time: "09:00", isMe: false },
       { id: "m502", text: "Bom dia Sra. Helena. Está na lavanderia, vou passar hoje.", time: "09:05", isMe: true },
-      { id: "m503", text: "Encontrei isso no escritório dele. Esse batom barato não é meu.", time: "13:45", isMe: false },
-      { id: "m504", text: "Se você não pedir demissão até amanhã, eu vou garantir que você nunca mais consiga emprego nem limpando chão.", time: "13:50", isMe: false }
+      { id: "m503", text: "Encontrei isso no escritório dele. Esse batom barato não é meu.", time: "13:45", isMe: false }
     ]
   },
 
